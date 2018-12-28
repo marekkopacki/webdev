@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        
+        <title>oplywanie</title>
+    </head>
+
+    <style>
+        body {
+            margin: 0px;
+            
+        }
+
+        div {
+            font-size: 200%;
+            display: inline;
+            margin: 0px;
+            padding: 0px;
+            
+        }
+
+        .no-float {
+           margin: 0px;
+         }
+
+         p {
+             font-size: 200%;
+             text-align: justify;
+         }
+
+    </style>
+
+    <body>
+        <h1><em>No float</em></h1>
+        <div>
+            <img style="margin-right: 10px" src="piesek.jpg">
+            Tutaj poćwiczymy dodawanie obrazków i ich
+            opływanie w okól tekstu, albo opływanie tekstu
+            w okół nich.. powiększę trochę wielkość liter
+            żeby tekstu było więcej.
+        </div>
+        <div>
+            Żeby dodać obrazek straczy go wrzucić do katalogu
+            (folderu) w którym jest nasza strona i pojawi
+            się on na pasku po lewej.
+        </div>
+        <div>
+            Żeby go dodać trzeba wpisać coś takiego:
+            <em>img src="piesek.jpg"</em>
+            Wstawiony domyślnie jest bez opływania w miejscu,
+            które wynika z położenia go w tekście kodu.
+            W tym przypadku na początku pierwszego <em>diva</em>.  
+        </div>
+
+       <h1><em>Float left</em></h1>
+
+       <p style="font-size: 200%">
+            <img style="float: left; margin: 5px;" src="piesek.jpg">
+            Teraz dodamy obrazek z opływaniem tekstu po lewej stronie.<br>
+            Umiejscowimi go znowu w pierwszej linijce akapitu.<br>
+            Dodanie opływania po lewej stronie, piesek przesuwa cały
+            paragrafdo swojego marginesu.
+            Przy okazji przećwiczyłem inny sposób dodawania stylu 
+            w <em>css'ie</em> :)
+       </p>
+        
+       <h1 style="padding-top: 30px"><em>Float right</em></h1>
+
+       <p style="text-align: justify">
+           Teraz dodamy obrazek z opływaniem po prawej stronie.
+           Dodam go w innym miejscu w tekście, aby sprawdzić co się stanie.
+           <img style="float: right; margin: 15px" src="piesek.jpg">
+           Żeby to sprawdzić potrzebuję dodać więcej tekstu...
+           Żeby to sprawdzić potrzebuję dodać więcej tekstu...
+           Żeby to sprawdzić potrzebuję dodać więcej tekstu...
+           Żeby to sprawdzić potrzebuję dodać więcej tekstu...
+           Żeby to sprawdzić potrzebuję dodać więcej tekstu...
+           Trochę brzydziej wygląda.. Dodam jakiś <em>margin</em>
+           Trochę lepiej jednak ta linijka, która jest nad pieskiem
+           psuje efekt. Tak raczej nie będę robił. Chyba zeby wyjustować
+           tekst ale nie wiem jeszcze jak to zrobić.<br>
+           Ok już wiem jak i wygląda o wiele lepiej :)
+       </p>
+
+       <h1><em>Dwa obrazki po lewej</em></h1>
+
+       <p>
+           <img style="float: left" src="piesek.jpg">
+           <img style="float: left" src="kotek.jpg">
+           Przy dodawaniu dwóch obrazków pojawiają się w kolejności
+           w jakiej są umieszczane w tekście kodu. Przy opływaniu
+           z lewej strony układają się od lewej do prawej.
+       </p>
+
+       <h1 style="padding-top: 120px"><em>Dwa obrazki po prawej</em></h1>
+
+       <p>
+            <img style="float: right" src="piesek.jpg">
+            <img style="float: right" src="kotek.jpg">
+            Przy dodawaniu dwóch obrazków pojawiają się w kolejności
+            w jakiej są umieszczane w tekście kodu.
+            Przy opływaniu po prawej stronie, układają się od prawej do lewej.
+       </p>
+    </body>
+
+</html>

@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+    <title>css positioning</title>
+
+<style>
+    div em {
+        background: pink;
+    }
+
+    .dziadek {
+        background: gray;
+        position: relative;
+        margin: 0px;
+    }
+
+    .tato {
+        background: yellow;
+        position: relative;
+        top: 50px;
+        padding: 50px;
+        margin-bottom: 50px;
+        
+    }
+
+    .syn {
+        color: green;
+        background-color: lightblue;
+        font-size: 150%;
+        
+        position: relative;
+        top: 100px;
+        left: 20px;
+    }
+    .córka {
+        color: black;
+        font-size: 150%;
+        background: pink;
+
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        right: 10px;
+        //bottom: 10px;
+    }
+
+    ul {
+        
+        display: felx;
+    }
+
+    h1 {
+        position: fixed;
+        top: 0px;
+        left: 0px;
+        right: 0px;
+        height: 50px;
+        background: whitesmoke;
+        margin: 0px;
+        
+    }
+
+    .tytuł {
+        font-size: 200%;
+        background: blue;
+        font-style: em;
+        position: fixed;
+        top: 0px;
+        left: 0px;
+        right: 0px;
+    }
+
+    li {
+        margin: 0px;
+    }
+   
+    li li{
+        color: red;
+    }
+</style>
+
+
+
+</head>
+    
+    <body class="dziadek">
+           
+        <div class="tato">
+            <em>Body</em> wg Dev'a jest dziadkiem, 
+            natomiast <em>Div</em> jest tatą. 
+            <span class="syn"><em>Syn</em></span> jest gdzieś w obrębie taty.. 
+            wiadomo, jako rodzica. 
+            Więc niech <em>syn</em> stanie się 
+            synem - gdyż w rzeczywistosci nim jest.. -
+            i na potrzeby szkoleniowe, będziem nim manipulować.
+            Ale najpierw trzeba dodać klasy.
+            Więc <em>Body</em> nadamy klasę <em>dziadek</em>,
+            kolor szary,
+            <em>Div</em>, nadamy klasę <em>tato</em>,
+            kolor zółty,
+            a <em>synowi</em> nadamy klasę <em>syn</em>,
+            kolor zielony.
+            Syn pokazuje relacje w pozycjach relatywnych.
+            <span class="córka">Córka</span> pokaże relacje
+            w pozycjach absolutnych.
+            Dodamy jeszcze klase <em>tytuł</em> do pokazania <em>fixed position</em>:
+            <span class="tytuł"><b>Pozycje</b></span><br>
+            Luki w tekście świadczą o tym, że wszystko działa jak należy :)
+        </div>
+
+        <div>
+            <ul>
+                <li>
+                    <b>Pozycje statyczne</b> - 
+                    pozycje nadawane elementom dokumentu
+                    standardowo domyślnie.
+                </li>
+                <li>
+                    <b>Pozycje relatywne</b> - 
+                    określając pozycję dla <em>syna</em> jako
+                    relatywne w <em>stylu</em> możemy przesuwać
+                    jego pozycję - podając wartość np w px - w odniesieniu
+                    do pozycji, w której aktualnie się znajduje.
+                    W jego naturalnym miejscu zostaje niewypełniona luka.
+                    Może zawsze wrócić w to samo miejsce, czeka na niego
+                    i nie musi się rozpychać między innymi braćmi i siostrami.
+                </li>
+                <li>
+                    <b>Pozycje absolutne</b> - 
+                    Nadając <em>córce</em> pozycję absolutną
+                    będzie ona zmieniała swoje położenie w odniesieniu
+                    do najbliższego <em>rodzica</em>, <em>dziadka</em>
+                    lun innego, nadrzędnego <em>taga</em> z określonymi
+                    pozycjami <em>relatywnymi</em>. Jeśli nie na takich,
+                    pozycje absolutne odnoszą się do dokumentu.
+                    <ul>
+                        <li>
+                        Nadając pozycje absolutną i zmieniając położenie
+                        <em>córki</em>, w tekście nie zostaje luka.. tym razem
+                        <em>córka</em> nie ma dla siebie miejsca ale jest elementem
+                        najbardziej sprzodu, przysłania wszystkich innych.
+                        Podobnie jak <em>syn</em> w położeniu relatywnym.
+                        </li>
+                    </ul>    
+                    <ul>
+                        <li>
+                        Z pomocą tej <em>pozycji</em> możemy również rozciągać elementy.
+                        Widać to z pomocą tła, które nadałem <em>córce</em>.
+                        Określiłem jej pozycję po 10px z lewej i prawej stony.
+                        Rozciągnęła się więc od lewego do prawego marginesu
+                        <em>taty</em>, zostawiając 10 pikselowe przestrzenie
+                        od marginesów. Ma również 10px od góry i wyłaczone slashami //
+                        10px od dołu, ponieważ przez swoje przesłaniające właściwości
+                        zakryła by nam cały tekst w <em>tacie</em>.
+                        </li>
+                    </ul>    
+                </li>    
+                    <li>
+                        <b><em>Fixed</em> pozycja</b> - 
+                        Nadając tą pozycję <em>h1</em> przestanie ona respektować
+                        nadrzędne tagi, niezależnie od ich <em>pozycji</em>ale
+                        będzie cały czas widoczna na ekranie podczas przewijania strony.
+                        Utrzymuje relacje jedynie z oknem dokumentu.
+                        <ul>      
+                            <li>Nie wiem czemu <em>h1</em> tytuł zasłania <em>tate</em>,
+                                a występuje pod <em>dziadkiem</em>.. jak umieszczę
+                                go w <em>head</em> to chowa się pod wsystkimi..<br>
+                                ok jakoś to naprawiłem ale nie do końca wiem jak..
+                            </li>
+                        </ul>    
+                    </li>
+                </li>
+            </ul>
+        </div>
+        <div style="height: 2000px; background: lawngreen; width: 5px;"></div>
+    </body>
+
+</html>
